@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>꼬리마켓</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
         header{
             background-color: black;
             color:white;
@@ -18,23 +25,61 @@
             justify-content:space-between;
             align-items:center;
             }
-        .menu{
-            margin-left: 100px;
-        }
         .menu a{
             color:white;
             text-decoration:none;
-            margin-left:100px;
+            margin-left:20px;
             font-size:14px;
             }
+        .hero{
+            background:white;
+            padding:60px;
+            text-align:center;
+            border-bottom:1px solid #ddd;
+            }
+        .container{
+            width:1100px;
+            margin:auto;
+            padding:40px 0;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+            }
 
+        .card{
+            background:white;
+            border:1px solid #ddd;
+            border-radius:6px;
+            overflow:hidden;
+            transition:0.2s;
+            }
+
+        .card:hover{
+            transform:translateY(-3px);
+            }
+
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            }
+
+        .card-body{
+            padding:15px;
+            }
+        
     </style>
 </head>
 <body>
     <header>
         <div class="nav">
+            <!-- 홈페이지 로고 260404 -->
             <div class="logo">
                 <img src="\img\logo.png"  width= 100px>
+            </div>
+                <!-- 네비 영역 메뉴 260404 -->
                 <div class="menu">
                     <a href="home.html">Home</a>
                     <a href="products.html">Products</a>
@@ -42,8 +87,59 @@
                     <a href="cart.html">Cart</a>
                     <a href="login.html">Login</a>
                 </div>
-            </div>
         </div>
     </header>
+
+    <!-- 베너 영역 260404 -->
+    <section class="hero">
+        <h1>꼬리마켓 Big Event</h1>
+        <p>모든 품목 20%~ 추가 할인!</p>
+    </section>
+
+    <div class="container">
+        <h2 style="margin-bottom:20px;">
+            추천 상품 항목</h2>
+            
+        <!-- 추천 상품 항목 260404 -->
+       <div class="grid">
+            <div class="card">
+                <img src="\img\간식1.PNG">
+                    <div class="card-body">
+                    <h3>시저 캔 흰살생선과 야채 100g</h3>
+                    <p class="price">2500원</p>
+                    <a class="btn" href="">View</a>
+                    </div>
+            </div>
+
+            <div class="card">
+                <img src="\img\사료1.PNG">
+                    <div class="card-body">
+                    <h3>뉴트리나 건강백서 사료 건강한 1세 2kg</h3>
+                    <p class="price">21000원</p>
+                    <a class="btn" href="">View</a>
+                    </div>
+            </div>
+
+            <div class="card">
+                <img src="\img\장난감1.PNG">
+                    <div class="card-body">
+                    <h3>쏘아베 치실토이 곰</h3>
+                    <p class="price">2700원</p>
+                    <a class="btn" href="">View</a>
+                    </div>
+            </div>
+
+            <div class="card">
+                <img src="\img\쿠션1.PNG">
+                    <div class="card-body">
+                    <h3>힐링타임 도넛 쿠션 넥카라 아쿠아폭스</h3>
+                    <p class="price">13000원</p>
+                    <a class="btn" href="">View</a>
+                    </div>
+            </div>
+
+       </div>
+    </div>
+
 </body>
 </html>
