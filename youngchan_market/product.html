@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            background-color: black;
+            color:white;
+            padding:15px 40px;
+        }
+        .logo{
+            display:flex;
+            }
+        .nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            }
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-size:14px;
+            }
+        .footer{
+            margin-top:60px;
+            background:#111;
+            color:#aaa;
+            text-align:center;
+            padding:30px;
+            font-size:15px;
+            }
+        .container{
+            width:1100px;
+            margin:auto;
+            padding:40px 0;
+            }
+        .price{
+            font-weight:bold;
+            margin-top:5px;
+            }
+        .btn{
+            display:inline-block;
+            margin-top:10px;
+            padding:8px 14px;
+            background:#111;
+            color:white;
+            text-decoration:none;
+            font-size:13px;
+            border-radius:3px;
+            }
+        .product-layout{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+            background:white;
+            padding:40px;
+            border:1px solid #ddd;
+            }
+        .product-layout img{
+            width:100%;
+            }
+    </style>
+</head>
+<body>
+        <header>
+        <div class="nav">
+            <!-- 홈페이지 로고 260404 -->
+            <div class="logo">
+                <img src="\img\logo.png"  width= 100px>
+            </div>
+                <!-- 네비 영역 메뉴 260404 -->
+                <div class="menu">
+                    <a href="home.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="category.html">Category</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="login.html">Login</a>
+                </div>
+        </div>
+    </header>
+
+    <!-- 상품 소개 260425 -->
+    <div class="container">
+        <div class="product-layout">
+            <img src="img\간식1.PNG">
+            <div>
+                <!-- 상품명 영역 -->
+                <h2>시저 캔 흰살생선과 야채 100g</h2>
+                <!-- 상품 설명 영역 -->
+                <p style="margin: 10px 0;"></p>
+                <!-- 상품 가격 영역 -->
+                <p>2,500원</p>
+                <!-- 장바구니 버튼 영역 -->
+                <a class="btn"
+                    href="cart.html">장바구니</a>
+                <!-- 상품 상세 설명 영역 -->
+                <br>
+                <br>
+                <b>상품설명</b>
+                <br>
+                <p>시저는 반려견의 식이습성을 유지해주고 수분 보충을 도우며 미네랄을 공급하여 반려견의 건강을 지켜주는 제품입니다. 반려견에게 꼭 필요한 필수 아미노산, 지방산, 비타민, 미네랄 등을 균형있게 공급해줄 수 있는 100% 균형잡힌 양양식이고, 낮은 칼로리로 쉽게 포만감을 주어 체중을 쉽게 조절할 수 있으며, 85%가 수분으로 구성되어 있어 치내의 수분 밸런스를 적절하게 유지해줍니다. 소형견에게는 비뇨기질환이 일어나기 쉬워 음식물을 통한 자연스러운 수분 섭취로 인하여 요로결석 형성의 위험률이 현저히 낮아지고, 실제 육류를 가공한 것으로 씹고, 물고, 빨고, 찢는 등의 자연스러운 식이습성을을 만족시켜줍니다. 알루미늄 캔의 특성상 강도가 약하여 눌릴 수 있으나, 인체에 무해하며 무게가 가볍고 녹이 안 생기며 개관성이 우수합니다.</p>
+                <br>
+                <b>원산지</b>
+                <p>호주</p>
+                <br>
+                <b>용량/중량</b>
+                <p>100g</p>
+                <br>
+                <b>성분구성</b>
+                <p>조단백질 6.0% 이상, 조지방 1.5% 이상, 칼슘 0.18% 이상, 인 0.19% 이하, 조섬유 2.0% 이하, 조회분 3.0% 이하, 수분 89.0% 이하</p>
+
+  
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        Tail Market Demo Store
+    </div>
+
+
+
+</body>
+</html>
