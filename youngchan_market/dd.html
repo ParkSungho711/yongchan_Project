@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products</title>
+<style>
+/* 기존 스타일 유지 */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px 40px;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+.container{
+width:1100px;
+margin:auto;
+padding:40px 0;
+}
+
+/* ==========================================
+   새로 추가된 카테고리 필터 버튼 스타일
+========================================== */
+.category-filter {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 (좌측 정렬을 원하면 flex-start로 변경) */
+    gap: 12px;
+    margin: 20px 0 40px 0;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 30px; /* 둥근 알약 모양 */
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* 마우스 호버 시 효과 */
+.filter-btn:hover {
+    border-color: #111;
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 현재 선택된 카테고리(활성화) 상태 */
+.filter-btn.active {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+/* ========================================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border:1px solid #ddd;
+border-radius:6px;
+overflow:hidden;
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 카드 호버 시 그림자 디테일 살짝 추가 */
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-body{
+padding:15px;
+}
+
+.price{
+font-weight:bold;
+margin-top:5px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+background:#111;
+color:white;
+text-decoration:none;
+font-size:13px;
+border-radius:3px;
+transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* 기타 스타일 생략 (주신 코드와 동일) */
+.hero, .product-layout, .table, .form-box, .footer {
+    /* ... 기존 설정 ... */
+}
+.footer{
+margin-top:60px;
+background:#111;
+color:#aaa;
+text-align:center;
+padding:30px;
+font-size:13px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">ModernShop</div>
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="category.html">Category</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+</div>
+</div>
+</header>
+
+
+<div class="container">
+    <h2 style="text-align:center; font-size:28px;">Our Products</h2>
+    
+    <div class="category-filter">
+        <a href="#" class="filter-btn active">All</a>
+        <a href="#" class="filter-btn">Outer</a>
+        <a href="#" class="filter-btn">Top</a>
+        <a href="#" class="filter-btn">Bottom</a>
+        <a href="#" class="filter-btn">Accessories</a>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=1">
+        <div class="card-body">
+        <h3>Product 1</h3>
+        <p class="price">$50</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=2">
+        <div class="card-body">
+        <h3>Product 2</h3>
+        <p class="price">$60</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=3">
+        <div class="card-body">
+        <h3>Product 3</h3>
+        <p class="price">$70</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=4">
+        <div class="card-body">
+        <h3>Product 4</h3>
+        <p class="price">$80</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=5">
+        <div class="card-body">
+        <h3>Product 5</h3>
+        <p class="price">$90</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=6">
+        <div class="card-body">
+        <h3>Product 6</h3>
+        <p class="price">$100</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=7">
+        <div class="card-body">
+        <h3>Product 7</h3>
+        <p class="price">$110</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="https://picsum.photos/300/200?random=8">
+        <div class="card-body">
+        <h3>Product 8</h3>
+        <p class="price">$120</p>
+        <a class="btn" href="product.html">View</a>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="footer">
+ModernShop Demo Store
+</div>
+
+</body>
+</html>
