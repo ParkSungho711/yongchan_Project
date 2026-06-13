@@ -92,14 +92,39 @@
             font-size:15px;
             }
         /* 260530 카테고리 필터 영역 */
-        .category-filter{
+        .category-filter {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* 가운데 정렬 (좌측 정렬을 원하면 flex-start로 변경) */
             gap: 12px;
             margin: 20px 0 40px 0;
         }
-        .filter-btn{
-            
+
+        .filter-btn {
+            padding: 10px 24px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 30px; /* 둥근 알약 모양 */
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* 마우스 호버 시 효과 */
+        .filter-btn:hover {
+            border-color: #111;
+            color: #111;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* 현재 선택된 카테고리(활성화) 상태 */
+        .filter-btn.active {
+            background: #111;
+            color: white;
+            border-color: #111;
         }
     </style>
 </head>
@@ -112,7 +137,7 @@
             </div>
                 <!-- 네비 영역 메뉴 260404 -->
                 <div class="menu">
-                    <a href="home.html">Home</a>
+                    <a href="main.html">Home</a>
                     <a href="products.html">Products</a>
                     <a href="category.html">Category</a>
                     <a href="cart.html">Cart</a>
@@ -127,12 +152,12 @@
             
         <!-- 260530 카테고리별 상품 분류 코드 -->
         <div class="category-filter">
-            <a href="filter-btn active">전체</a>
-            <a href="filter-btn">사료</a>
-            <a href="filter-btn">간식</a>
-            <a href="filter-btn">장난감</a>
-            <a href="filter-btn">의류/악세서리</a>
-            <a href="filter-btn">하우스/울타리</a>
+            <a href="#" class="filter-btn active">전체</a>
+            <a href="#" class="filter-btn">사료</a>
+            <a href="#" class="filter-btn">간식</a>
+            <a href="#" class="filter-btn">장난감</a>
+            <a href="#" class="filter-btn">의류/악세서리</a>
+            <a href="#" class="filter-btn">하우스/울타리</a>
         </div>
 
         <!-- 추천 상품 항목 260404 -->
